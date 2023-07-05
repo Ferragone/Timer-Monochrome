@@ -19,7 +19,27 @@
       <img src="./img/logo.svg" alt="Лого" class="src" />
     </div>
     <form class="timer">
-      <div class="info"></div>
+      <div class="info">
+        Установить медитацию на
+        <input
+          type="number"
+          name="time"
+          aria-label="Число минут для медитации"
+          value="10"
+        />
+        минут
+      </div>
+      <div class="coutdown">
+        <div class="num" id="min_tens">0</div>
+        <div class="num" id="min">0</div>
+        <div class="dots">:</div>
+        <div class="num" id="sec_tens">0</div>
+        <div class="num" id="sec">0</div>
+      </div>
+      <button type="submit" class="button">
+        <img src="./img/Play.svg" alt="Иконка Play" class="src" />
+        Запустить таймер
+      </button>
     </form>
   </body>
 </html>
