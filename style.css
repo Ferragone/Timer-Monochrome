@@ -1,3 +1,16 @@
 body {
   font-family: "Roboto", sans-serif;
+  background: #121214 
+  display flex;
+  align-items: center;
+  justify-content: center;
+  color: white
+  -wekit-font-smoothing antialiased
+  -moz-osx-fonr-smoozing grayscale 
+  min-heigh 100vh;
+}
+
+:root {
+    --primary: #6c38cc
+    --anti-accent: #7c7c8a 
 }
