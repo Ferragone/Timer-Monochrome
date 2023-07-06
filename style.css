@@ -33,26 +33,45 @@ body {
 .timer {
   display: flex;
   align-items: center;
-justify-content: center;
-flex-direction: column;
-gap: 30px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .info {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 160%;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 160%;
 }
 
 .info input {
- width: 40px;
- background: none;
- border: none;
- text-align: center;
- font-weight: 700;
- color: var(--anti-accent);
- font-size: 18px;
- padding: 5px 10px;
+    width: 40px;
+    background: none;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    color: var(--anti-accent);
+    font-size: 18px;
+    padding: 5px 10px;
 }
 
+.info input::-webkit-outer-spin-button,
+.info input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+.coutdown {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.num {
+  font-family: "Roboto Mono", momospace;
+  font-size: 160px;
+  line-height: 1;
+  background: #29292e
+  padding 40px 16px;
+  border-radius: 8px;
+}
