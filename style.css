@@ -12,5 +12,47 @@ body {
 
 :root {
     --primary: #6c38cc
-    --anti-accent: #7c7c8a 
+    --anti-accent: #7c7c8a
 }
+
+*{
+  box-sizing: border-box;
+}
+
+.wrapp {
+  background: #202024
+  border-radius 8px;
+  padding: 30 px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  gap: 30px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 30px;
+}
+
+.info {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.info input {
+ width: 40px;
+ background: none;
+ border: none;
+ text-align: center;
+ font-weight: 700;
+ color: var(--anti-accent);
+ font-size: 18px;
+ padding: 5px 10px;
+}
+
+
