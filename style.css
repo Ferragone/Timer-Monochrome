@@ -66,11 +66,11 @@ body {
   margin: 0;
 }
 
-.Info input [type="number"] {
+.info input [type="number"] {
   -moz-appearance: textfield;
 }
 
-.coutdown {
+.countdown {
   display: flex;
   gap: 16px;
   align-items: center;
