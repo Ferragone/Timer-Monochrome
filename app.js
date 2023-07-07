@@ -38,9 +38,9 @@ class App {
       }
       this.#startTimer({
         min_tens: Math.floor(delta / 1000 / 60 / 10),
-        min: ath.floor((delta / 1000 / 60) % 10),
+        min: Math.floor((delta / 1000 / 60) % 10),
         sec_tens: Math.floor((delta % 60000) / 10000),
-        sec: Math.floor(((delta % 60000) / 10000) % 10),
+        sec: Math.floor(((delta % 60000) / 1000) % 10),
       });
     }, 500);
   }
