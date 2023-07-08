@@ -19,12 +19,7 @@ class App {
     if (this.#interval) {
       clearInterval(this.#interval);
     }
-    this.#startTimer({
-      min_tens: 0,
-      min: 0,
-      sec_tens: 0,
-      sec: 0,
-    });
+    this.#setTimer(0, 0, 0, 0);
   }
 
   #startTimer(time) {
@@ -36,19 +31,18 @@ class App {
         clearInterval(this.#interval);
         return;
       }
-      this.#startTimer({
-        min_tens: Math.floor(delta / 1000 / 60 / 10),
-        min: Math.floor((delta / 1000 / 60) % 10),
-        sec_tens: Math.floor((delta % 60000) / 10000),
-        sec: Math.floor(((delta % 60000) / 1000) % 10),
-      });
+      const min_tens = Math.floor(delta / 1000 / 60 / 10);
+      const min = Math.floor((delta / 1000 / 60) % 10);
+      const sec_tens = Math.floor((delta % 60000) / 10000);
+      const sec = Math.floor(((delta % 60000) / 1000) % 10);
+      this.#setTimer(min_tens, min, sec_tens, sec);
     }, 500);
   }
 
   #setTimer(min_tens, min, sec_tens, sec) {
     this.timer.min_tens.innerText = min_tens;
     this.timer.min.innerText = min;
-    this.timer.sec_tens_tens.innerText = sec_tens;
+    this.timer.sec_tens.innerText = sec_tens;
     this.timer.sec.innerText = sec;
   }
 }
